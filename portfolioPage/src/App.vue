@@ -1,12 +1,34 @@
-<script setup lang="ts">
-import { defineComponent } from 'vue';
-</script>
-
 <template>
-<div class="app">
-  hello
-  </div>
-</template>
+  <div class="App">
+    <p>{{ name }} - {{ age }}</p>
+    <button @click="changeName('Zelda')">change name</button>
+    <button @click="changeAge(30)">change name</button>
+
+    </div>
+  </template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent ({
+  name: 'App',
+  components: {},
+  data() {
+    return {
+      name: 'Link',
+      age: 25 as number | string
+    }
+  },
+  methods: {
+    changeName(name: string){
+      this.name = name
+    },
+    changeAge(age: number | number) {
+      this.age = age
+    }
+  }
+});
+</script>
 
 <style>
 
