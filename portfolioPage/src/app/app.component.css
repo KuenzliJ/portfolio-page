@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
-
-body{
-    font-family: 'Open Sans';
-    background: #ece6d9;
-}
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  

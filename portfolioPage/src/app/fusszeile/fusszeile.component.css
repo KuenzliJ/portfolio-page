@@ -8,13 +8,13 @@
   
   .footer {
     padding: 10px;
-    background-color: slategray;
+    background-color: #333333d0;
   }
   
   .footer .social {
     text-align: center;
     padding-bottom: 5px;
-    color: black;
+    color: rgb(150, 150, 150);
   }
   
   .footer .social a {
