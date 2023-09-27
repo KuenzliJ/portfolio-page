@@ -13,7 +13,30 @@ export class KontaktComponent {
   };
 
   submitForm() {
-    // Hier können Sie die Logik für das Absenden des Formulars implementieren
-    console.log('Formulardaten:', this.formData);
+    if (this.validateForm()) {
+      // Alle erforderlichen Felder sind ausgefüllt und die Validierung ist erfolgreich
+      console.log('Formulardaten:', this.formData);
+    } else {
+      // Nicht alle erforderlichen Felder sind ausgefüllt oder die Validierung ist fehlgeschlagen, Alert anzeigen
+      alert('Bitte füllen Sie alle erforderlichen Felder korrekt aus.');
+    }
+  }
+
+  validateForm(): boolean {
+    // Überprüfen, ob alle erforderlichen Felder ausgefüllt sind
+    if (!this.formData.name || !this.formData.email || !this.formData.message) {
+      return false;
+    }
+
+    // Überprüfen, ob die E-Mail-Adresse gültig ist
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!emailPattern.test(this.formData.email)) {
+      return false;
+    }
+
+    // Fügen Sie hier weitere Validierungen für das Kommentarfeld hinzu, falls erforderlich
+
+    // Wenn alle Validierungen erfolgreich sind
+    return true;
   }
 }
