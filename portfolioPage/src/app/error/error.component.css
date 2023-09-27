@@ -1,0 +1,14 @@
+.container {
+    position: relative;
+    width: 500px; /* Breite Ihrer Container-Div */
+    height: 300px; /* Höhe Ihrer Container-Div */
+  }
+  
+  #iframe {
+    position: absolute;
+    top: 50px; /* Anpassen der oberen Position */
+    left: 50px; /* Anpassen der linken Position */
+    width: 400px; /* Breite des Iframes */
+    height: 200px; /* Höhe des Iframes */
+  }
+  
