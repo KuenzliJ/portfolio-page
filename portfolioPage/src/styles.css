@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Open Sans');
-
 body, html {
+    top: 0;
     margin: 0;
     padding: 0;
-    border: 0;
-    font-family: 'Open Sans';
+    font-family: 'Verdana';
     background:  rgba(0, 0, 0, 0.192);
   }
   
