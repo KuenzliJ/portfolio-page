@@ -15,7 +15,7 @@
     height: 100vh; /* Setze die Höhe auf die Bildschirmhöhe, um die Mitte zu zentrieren */
   }
   
-  .text {
+  .name {
     font-family: 'Verdana';
     font-size: 80px;
     opacity: 0; /* Starte mit unsichtbarem Text */
@@ -33,4 +33,14 @@
       transform: translateY(0);
     }
   }
-  
+.text-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 100vh; /* Setze die Höhe auf die Bildschirmhöhe, um die Mitte zu zentrieren */
+}
+.top {
+  font-family: 'Verdana';
+  font-size: 50px;
+  color: aliceblue;
+}
