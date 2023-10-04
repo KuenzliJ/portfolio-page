@@ -1,0 +1,46 @@
+.body{ 
+    height: 100vh;
+    background-image: url('https://i.gifer.com/NvL.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+}
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Setze die Höhe auf die Bildschirmhöhe, um die Mitte zu zentrieren */
+  }
+  
+  .name {
+    font-family: 'Verdana';
+    font-size: 80px;
+    opacity: 0; /* Starte mit unsichtbarem Text */
+    animation: reveal 2s linear forwards;
+    color: aliceblue;
+  }
+  
+  @keyframes reveal {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.text-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  height: 100vh; /* Setze die Höhe auf die Bildschirmhöhe, um die Mitte zu zentrieren */
+}
+.top {
+  font-family: 'Verdana';
+  font-size: 50px;
+  color: aliceblue;
+}

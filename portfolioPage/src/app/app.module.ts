@@ -10,6 +10,7 @@ import { ErrorComponent } from './error/error.component';
 import { FusszeileComponent } from './fusszeile/fusszeile.component';
 import { NavigationsbarComponent } from './navigationsbar/navigationsbar.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { KontaktComponent } from './kontakt/kontakt.component';
     ErrorComponent,
     FusszeileComponent,
     NavigationsbarComponent,
-    KontaktComponent
+    KontaktComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
