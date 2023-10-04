@@ -3,6 +3,8 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: 'Verdana';
-    background:  rgba(0, 0, 0, 0.192);
-  }
+    background-image: url('https://i.gifer.com/NvL.gif');
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;  }
   
