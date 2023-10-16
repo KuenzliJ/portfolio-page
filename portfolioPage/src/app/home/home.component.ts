@@ -20,10 +20,15 @@ export class HomeComponent {
       setTimeout(() => {
         this.displayText += text[index];
         index = (index + 1) % text.length;
+
         if (index === 0) {
-          this.displayText = ""; // Zurücksetzen, wenn das Wort vollständig angezeigt wurde
+          setTimeout(() => {
+            this.displayText = ""; // Zurücksetzen nach 5 Sekunden
+            loop(); // Starte den Loop erneut
+          }, 5000); // 5000 Millisekunden = 5 Sekunden
+        } else {
+          loop();
         }
-        loop();
       }, 500); // Verzögerung zwischen Buchstaben
     };
 
