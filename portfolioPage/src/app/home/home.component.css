@@ -7,12 +7,25 @@ body {
   padding: 0;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .name {
   font-size: 1200%;
   opacity: 0; /* Starte mit unsichtbarem Text */
   animation: reveal 2s linear forwards;
   color: aliceblue;
 }
+
+.invest {
+  font-size: 40px; /* Größe nach Bedarf anpassen */
+  color: aliceblue;
+}
+
 
 @keyframes reveal {
   0% {

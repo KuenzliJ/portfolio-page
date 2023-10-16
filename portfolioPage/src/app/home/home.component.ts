@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   displayText = ""; // Starte mit einem leeren Text
+  showInvestmentText = false;
 
   ngOnInit(): void {
     this.startTextLoop();
@@ -22,8 +23,10 @@ export class HomeComponent {
         index = (index + 1) % text.length;
 
         if (index === 0) {
+          this.showInvestmentText = true;
           setTimeout(() => {
             this.displayText = ""; // Zurücksetzen nach 5 Sekunden
+            this.showInvestmentText = false;
             loop(); // Starte den Loop erneut
           }, 5000); // 5000 Millisekunden = 5 Sekunden
         } else {

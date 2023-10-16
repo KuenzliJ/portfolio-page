@@ -1,3 +1,6 @@
 <body class="body">
-  <div class="name" [innerHTML]="displayText"></div>
+  <div class="content">
+    <div class="name" [innerHTML]="displayText"></div>
+    <p class="invest" *ngIf="showInvestmentText">your next good investment?</p>
+  </div>
 </body>
