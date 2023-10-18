@@ -8,8 +8,8 @@
   
   .footer {
     padding: 10px;
-    background-color: #333333d0;
-  }
+    background-color: rgba(0, 0, 0, 0.7);
+    }
   
   .footer .social {
     text-align: center;
