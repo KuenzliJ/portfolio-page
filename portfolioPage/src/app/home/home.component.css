@@ -15,17 +15,16 @@ body {
 }
 
 .name {
-  font-size: 1200%;
+  font-size: 15vw; /* Use viewport width as a relative unit for responsiveness */
   opacity: 0; /* Starte mit unsichtbarem Text */
   animation: reveal 2s linear forwards;
   color: aliceblue;
 }
 
 .invest {
-  font-size: 40px; /* Größe nach Bedarf anpassen */
+  font-size: 5vw; /* Use viewport width as a relative unit for responsiveness */
   color: aliceblue;
 }
-
 
 @keyframes reveal {
   0% {
