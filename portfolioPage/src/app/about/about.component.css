@@ -1,33 +1,46 @@
 .my-website-container {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 20px; /* Add padding for better spacing */
   color: aliceblue;
   background-color: rgba(0, 0, 0, 0.902);
-  height: 100%; 
+  min-height: 100vh;
 }
 
 .profile {
-  flex: 1; /* Der Profilteil nimmt die Hälfte der Seite ein */
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center;
+  align-items: center;
   padding: 20px;
+  max-width: 100%;
+}
+
+.profile-img-container {
+  width: 35%; /* Adjust the width of the image container */
+  max-width: 250px;
+  margin: 0 auto; /* Center the container */
+  border-radius: 30%;
+  overflow: hidden; /* Ensure that the border-radius doesn't distort the image */
 }
 
 .profile img {
-  width: 250px;
-  height: 230px;
-  border-radius: 30%;
-  display: inline-block;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-text-container {
+  flex: 1; /* Take the remaining width */
+  padding: 20px;
 }
 
 .skills-box {
-  flex: 1; /* Der Skills-Teil nimmt ebenfalls die Hälfte der Seite ein */
+  flex: 1;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Zentriert die Elemente horizontal */
 }
 
 .skills-box h3 {
@@ -35,11 +48,24 @@
   margin-bottom: 10px;
 }
 
-.flex-container {
+.flex-container-container {
   display: flex;
-  flex-wrap: wrap; /* Hiermit werden die Elemente bei Platzmangel auf eine neue Zeile umgebrochen */
+  flex-wrap: wrap;
   gap: 10px;
-  align-items: center; /* Zentriert die Elemente horizontal */
+  align-items: center;
+  justify-content: center;
+  max-width: 100%; /* Allow the container to take full width */
+}
+
+.flex-container {
+  max-width: 600px; /* Set a maximum width for the container */
+  width: 100%; /* Take full width */
+}
+
+.flex-container img {
+  max-width: 100%; /* Make sure images are responsive */
+  height: 120px; /* Set a fixed height for the images */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the container */
 }
 
 .flex-container h4 {
@@ -49,8 +75,34 @@
 }
 
 .angular-logo {
-  width: 120x;
+  width: 120px;
   height: 120px;
   border-radius: 10px;
   padding: 10px;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+  .my-website-container {
+    padding: 10px; /* Adjust padding for small screens */
+  }
+
+  .profile {
+    flex-direction: column; /* Stack image and text on small screens */
+    text-align: left; /* Align text to the left on small screens */
+  }
+
+  .profile-img-container {
+    width: 100%; /* Full width for image on small screens */
+    max-width: none; /* Allow the image to exceed its container's width */
+    margin-bottom: 10px; /* Add some spacing between image and text on small screens */
+  }
+
+  .profile-text-container {
+    flex: 1; /* Take the full width for text on small screens */
+  }
+
+  .flex-container {
+    max-width: 100%; /* Allow the flex container to take full width on small screens */
+  }
 }
