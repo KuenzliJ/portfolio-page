@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-kontakt',
@@ -10,14 +11,28 @@ export class KontaktComponent {
     name: '',
     email: '',
     message: ''
-  };
+  }; 
+  fact: string = '';
+  status: boolean = false;
+  constructor(private http: HttpClient) {}
 
   submitForm() {
     if (this.validateForm()) {
-      // Alle erforderlichen Felder sind ausgefüllt und die Validierung ist erfolgreich
-      console.log('Formulardaten:', this.formData);
-      // Reload the page after successful form submission
-      window.location.reload();
+console.log('Formulardaten:', this.formData);
+
+      const apiUrl = 'https://catfact.ninja/fact';
+
+      this.http.get(apiUrl).subscribe(
+        (response: any) => {
+          console.log('API Response:', response);
+
+          // Update the fact variable with the received fact
+          this.fact = response.fact;
+        },
+        (error: any) => {
+          console.error('API Error:', error);
+        }
+      );
     } else {
       // Nicht alle erforderlichen Felder sind ausgefüllt oder die Validierung ist fehlgeschlagen, Alert anzeigen
       alert('Please fill in all required fields correctly.');
@@ -38,6 +53,7 @@ export class KontaktComponent {
 
     // Wenn alle Validierungen erfolgreich sind
     console.log('Formulardaten:', this.formData);
+    this.status = true;
     return true;
   }
 }

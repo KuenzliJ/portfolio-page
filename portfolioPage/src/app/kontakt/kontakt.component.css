@@ -36,3 +36,9 @@ button {
 button:hover {
   background-color: #45a049;
 }
+.fact{
+  color: aliceblue;
+  width: 300px;
+  container: center;
+  margin: auto;
+}
