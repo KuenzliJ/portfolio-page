@@ -2,7 +2,10 @@ form {
   width: 300px;
   margin: 0 auto;
 }
-
+.container{
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 20px;
+}
 div {
   margin-bottom: 10px;
 }
@@ -41,4 +44,6 @@ button:hover {
   width: 300px;
   container: center;
   margin: auto;
+  background-color: rgba(0, 0, 0, 0.902);
+  border-radius: 20px;
 }
