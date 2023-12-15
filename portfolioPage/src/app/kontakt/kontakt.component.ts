@@ -16,9 +16,11 @@ export class KontaktComponent {
     if (this.validateForm()) {
       // Alle erforderlichen Felder sind ausgefüllt und die Validierung ist erfolgreich
       console.log('Formulardaten:', this.formData);
+      // Reload the page after successful form submission
+      window.location.reload();
     } else {
       // Nicht alle erforderlichen Felder sind ausgefüllt oder die Validierung ist fehlgeschlagen, Alert anzeigen
-      alert('Bitte füllen Sie alle erforderlichen Felder korrekt aus.');
+      alert('Please fill in all required fields correctly.');
     }
   }
 
@@ -34,9 +36,8 @@ export class KontaktComponent {
       return false;
     }
 
-    // Fügen Sie hier weitere Validierungen für das Kommentarfeld hinzu, falls erforderlich
-
     // Wenn alle Validierungen erfolgreich sind
+    console.log('Formulardaten:', this.formData);
     return true;
   }
 }
