@@ -7,4 +7,5 @@ body, html {
     background-repeat: no-repeat;
     background-position: center center;
     width: 100%;
+    background-size: cover; /* Skaliert das Hintergrundbild, um den gesamten Bildschirm abzudecken */
   }
