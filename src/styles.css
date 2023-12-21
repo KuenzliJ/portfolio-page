@@ -8,4 +8,5 @@ body, html {
     background-position: center center;
     width: 100%;
     background-size: cover; /* Skaliert das Hintergrundbild, um den gesamten Bildschirm abzudecken */
+    min-height:100%;
   }
